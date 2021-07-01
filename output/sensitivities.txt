@@ -1,0 +1,206 @@
+Sensitivities Task
+
+Function(s) to be derived:
+All Variables of the model
+
+Calculation to perform: Steady State
+
+Variable(s) for 1. derivation:
+All Parameter Values
+
+Variable(s) for 2. derivation:
+Not Set
+
+
+Method: Sensitivities Method
+    Delta factor: 0.001
+    Delta minimum: 1e-12
+
+
+
+Sensitivities Result:
+
+Sensitivities array
+
+Rows:    Target functions, All Variables of the model
+Columns: Variables 1, All Parameter Values
+	Values[N_italy].InitialValue	Values[N_greece].InitialValue	Values[beta_greece].InitialValue	Values[alpha_greece].InitialValue	Values[gamma_greece].InitialValue	Values[sigma_greece].InitialValue	Values[beta_italy].InitialValue	Values[alpha_italy].InitialValue	Values[gamma_italy].InitialValue	Values[sigma_italy].InitialValue
+Compartments[S_greece].Volume	6.02134e-09	9.3927e-10	-0.0254349	0.00937531	-0.13411	-0.0450946	-1.69846e-05	-0.000947662	0.00266358	-0.000335276
+Compartments[E_greece].Volume	4.273e-34	-3.53035e-35	6.49436e-27	1.43973e-25	3.6661e-26	-9.68212e-29	1.96423e-26	-2.49717e-26	2.77741e-26	1.16394e-25
+Compartments[I_greece].Volume	1.3792e-34	-1.18254e-35	2.08501e-27	4.59334e-26	1.16965e-26	-5.95487e-29	6.26678e-27	-7.96712e-27	8.8612e-27	3.71349e-26
+Compartments[R_greece].Volume	-2.53647e-09	-9.28696e-16	2.54988e-08	-0.000158103	0.000953387	0.000761741	0	0	0	0
+Compartments[D_greece].Volume	-7.84477e-11	-2.87226e-17	7.88622e-10	0.000158103	2.94862e-05	2.3559e-05	0	0	0	0
+Compartments[S_italy].Volume	0	1.62531e-25	3.34355e-18	1.41172e-17	7.94093e-18	0	2.57457e-18	2.22903e-17	8.47033e-18	6.77626e-18
+Compartments[E_italy].Volume	-2.66653e-34	1.21095e-33	3.32152e-26	0	1.57772e-25	0	0	2.21435e-25	1.26218e-25	5.04871e-26
+Compartments[I_italy].Volume	5.50431e-36	2.4219e-33	6.64304e-26	0	1.57772e-25	0	0	0	0	1.00974e-25
+Compartments[R_italy].Volume	-1.94818e-09	0	0	0	0	0	3.89498e-06	-0.000124911	0.00117399	0.000467257
+Compartments[D_italy].Volume	-1.17759e-10	0	0	0	0	0	2.35433e-07	0.000124911	7.09621e-05	2.82435e-05
+
+Scaled sensitivities array
+
+Rows:    Target functions, All Variables of the model
+Columns: Variables 1, All Parameter Values
+	Values[N_italy].InitialValue	Values[N_greece].InitialValue	Values[beta_greece].InitialValue	Values[alpha_greece].InitialValue	Values[gamma_greece].InitialValue	Values[sigma_greece].InitialValue	Values[beta_italy].InitialValue	Values[alpha_italy].InitialValue	Values[gamma_italy].InitialValue	Values[sigma_italy].InitialValue
+Compartments[S_greece].Volume	3.49285e-08	9.3927e-10	-9.27297e-10	2.69844e-11	-2.05867e-09	-8.65287e-10	-5.36113e-13	-5.18243e-12	2.55547e-11	-8.0417e-12
+Compartments[E_greece].Volume	-1439.56	20.5035	-137.51	-240.668	-326.843	1.07898	-360.083	79.3119	-154.759	-1621.38
+Compartments[I_greece].Volume	-1456.37	21.5265	-138.374	-240.665	-326.841	2.08	-360.083	79.3119	-154.759	-1621.38
+Compartments[R_greece].Volume	-1000	-6.31185e-05	6.31817e-05	-0.0309278	0.994667	0.993403	0	0	0	0
+Compartments[D_greece].Volume	-1000	-6.31185e-05	6.31817e-05	1	0.994667	0.993403	0	0	0	0
+Compartments[S_italy].Volume	-nan(ind)	inf	inf	inf	inf	-nan(ind)	inf	inf	inf	inf
+Compartments[E_italy].Volume	-1277.34	1000	1000	0	2000	0	0	1000	1000	1000
+Compartments[I_italy].Volume	inf	inf	inf	-nan(ind)	inf	-nan(ind)	-nan(ind)	-nan(ind)	-nan(ind)	inf
+Compartments[R_italy].Volume	-1000	0	0	0	0	0	0.010879	-0.0604454	0.996671	0.991709
+Compartments[D_italy].Volume	-1000	0	0	0	0	0	0.010879	1	0.996671	0.991709
+
+Summarized sensitivities array
+
+Rows: Variables 1, All Parameter Values
+Values[N_italy].InitialValue	3134.48
+Values[N_greece].InitialValue	1000.44
+Values[beta_greece].InitialValue	1018.85
+Values[alpha_greece].InitialValue	340.355
+Values[gamma_greece].InitialValue	2052.72
+Values[sigma_greece].InitialValue	2.73209
+Values[beta_italy].InitialValue	509.234
+Values[alpha_italy].InitialValue	1006.27
+Values[gamma_italy].InitialValue	1023.67
+Values[sigma_italy].InitialValue	2501.55
+
+
+
+Sensitivities Task
+
+Function(s) to be derived:
+Concentration Rates
+
+Calculation to perform: Steady State
+
+Variable(s) for 1. derivation:
+All Parameter Values
+
+Variable(s) for 2. derivation:
+Not Set
+
+
+Method: Sensitivities Method
+    Delta factor: 0.001
+    Delta minimum: 1e-12
+
+
+
+Sensitivities Result:
+
+Sensitivities array
+
+Rows: Variables 1, All Parameter Values
+Values[N_italy].InitialValue	-1.38631e-12
+Values[N_greece].InitialValue	-8.0417e-12
+Values[beta_greece].InitialValue	-0.000220576
+Values[alpha_greece].InitialValue	-0.00279397
+Values[gamma_greece].InitialValue	-0.000523869
+Values[sigma_greece].InitialValue	-0.000419095
+Values[beta_italy].InitialValue	-0.000254769
+Values[alpha_italy].InitialValue	-0.00147051
+Values[gamma_italy].InitialValue	-0.00083819
+Values[sigma_italy].InitialValue	-0.000335276
+
+Scaled sensitivities array
+
+Rows: Variables 1, All Parameter Values
+Values[N_italy].InitialValue	-8.0417e-12
+Values[N_greece].InitialValue	-8.0417e-12
+Values[beta_greece].InitialValue	-8.0417e-12
+Values[alpha_greece].InitialValue	-8.0417e-12
+Values[gamma_greece].InitialValue	-8.0417e-12
+Values[sigma_greece].InitialValue	-8.0417e-12
+Values[beta_italy].InitialValue	-8.0417e-12
+Values[alpha_italy].InitialValue	-8.0417e-12
+Values[gamma_italy].InitialValue	-8.0417e-12
+Values[sigma_italy].InitialValue	-8.0417e-12
+
+Summarized sensitivities array
+
+Rows: Variables 1, All Parameter Values
+Values[N_italy].InitialValue	3134.48
+Values[N_greece].InitialValue	1000.44
+Values[beta_greece].InitialValue	1018.85
+Values[alpha_greece].InitialValue	340.355
+Values[gamma_greece].InitialValue	2052.72
+Values[sigma_greece].InitialValue	2.73209
+Values[beta_italy].InitialValue	509.234
+Values[alpha_italy].InitialValue	1006.27
+Values[gamma_italy].InitialValue	1023.67
+Values[sigma_italy].InitialValue	2501.55
+
+
+
+Sensitivities Task
+
+Function(s) to be derived:
+All Variables of the model
+
+Calculation to perform: Steady State
+
+Variable(s) for 1. derivation:
+All Parameter Values
+
+Variable(s) for 2. derivation:
+Not Set
+
+
+Method: Sensitivities Method
+    Delta factor: 0.001
+    Delta minimum: 1e-12
+
+
+
+Sensitivities Result:
+
+Sensitivities array
+
+Rows:    Target functions, All Variables of the model
+Columns: Variables 1, All Parameter Values
+	Values[N_italy].InitialValue	Values[N_greece].InitialValue	Values[beta_greece].InitialValue	Values[alpha_greece].InitialValue	Values[gamma_greece].InitialValue	Values[sigma_greece].InitialValue	Values[beta_italy].InitialValue	Values[alpha_italy].InitialValue	Values[gamma_italy].InitialValue	Values[sigma_italy].InitialValue
+Compartments[S_greece].Volume	6.02134e-09	9.3927e-10	-0.0254349	0.00937531	-0.13411	-0.0450946	-1.69846e-05	-0.000947662	0.00266358	-0.000335276
+Compartments[E_greece].Volume	4.273e-34	-3.53035e-35	6.49436e-27	1.43973e-25	3.6661e-26	-9.68212e-29	1.96423e-26	-2.49717e-26	2.77741e-26	1.16394e-25
+Compartments[I_greece].Volume	1.3792e-34	-1.18254e-35	2.08501e-27	4.59334e-26	1.16965e-26	-5.95487e-29	6.26678e-27	-7.96712e-27	8.8612e-27	3.71349e-26
+Compartments[R_greece].Volume	-2.53647e-09	-9.28696e-16	2.54988e-08	-0.000158103	0.000953387	0.000761741	0	0	0	0
+Compartments[D_greece].Volume	-7.84477e-11	-2.87226e-17	7.88622e-10	0.000158103	2.94862e-05	2.3559e-05	0	0	0	0
+Compartments[S_italy].Volume	0	1.62531e-25	3.34355e-18	1.41172e-17	7.94093e-18	0	2.57457e-18	2.22903e-17	8.47033e-18	6.77626e-18
+Compartments[E_italy].Volume	-2.66653e-34	1.21095e-33	3.32152e-26	0	1.57772e-25	0	0	2.21435e-25	1.26218e-25	5.04871e-26
+Compartments[I_italy].Volume	5.50431e-36	2.4219e-33	6.64304e-26	0	1.57772e-25	0	0	0	0	1.00974e-25
+Compartments[R_italy].Volume	-1.94818e-09	0	0	0	0	0	3.89498e-06	-0.000124911	0.00117399	0.000467257
+Compartments[D_italy].Volume	-1.17759e-10	0	0	0	0	0	2.35433e-07	0.000124911	7.09621e-05	2.82435e-05
+
+Scaled sensitivities array
+
+Rows:    Target functions, All Variables of the model
+Columns: Variables 1, All Parameter Values
+	Values[N_italy].InitialValue	Values[N_greece].InitialValue	Values[beta_greece].InitialValue	Values[alpha_greece].InitialValue	Values[gamma_greece].InitialValue	Values[sigma_greece].InitialValue	Values[beta_italy].InitialValue	Values[alpha_italy].InitialValue	Values[gamma_italy].InitialValue	Values[sigma_italy].InitialValue
+Compartments[S_greece].Volume	3.49285e-08	9.3927e-10	-9.27297e-10	2.69844e-11	-2.05867e-09	-8.65287e-10	-5.36113e-13	-5.18243e-12	2.55547e-11	-8.0417e-12
+Compartments[E_greece].Volume	-1439.56	20.5035	-137.51	-240.668	-326.843	1.07898	-360.083	79.3119	-154.759	-1621.38
+Compartments[I_greece].Volume	-1456.37	21.5265	-138.374	-240.665	-326.841	2.08	-360.083	79.3119	-154.759	-1621.38
+Compartments[R_greece].Volume	-1000	-6.31185e-05	6.31817e-05	-0.0309278	0.994667	0.993403	0	0	0	0
+Compartments[D_greece].Volume	-1000	-6.31185e-05	6.31817e-05	1	0.994667	0.993403	0	0	0	0
+Compartments[S_italy].Volume	-nan(ind)	inf	inf	inf	inf	-nan(ind)	inf	inf	inf	inf
+Compartments[E_italy].Volume	-1277.34	1000	1000	0	2000	0	0	1000	1000	1000
+Compartments[I_italy].Volume	inf	inf	inf	-nan(ind)	inf	-nan(ind)	-nan(ind)	-nan(ind)	-nan(ind)	inf
+Compartments[R_italy].Volume	-1000	0	0	0	0	0	0.010879	-0.0604454	0.996671	0.991709
+Compartments[D_italy].Volume	-1000	0	0	0	0	0	0.010879	1	0.996671	0.991709
+
+Summarized sensitivities array
+
+Rows: Variables 1, All Parameter Values
+Values[N_italy].InitialValue	3134.48
+Values[N_greece].InitialValue	1000.44
+Values[beta_greece].InitialValue	1018.85
+Values[alpha_greece].InitialValue	340.355
+Values[gamma_greece].InitialValue	2052.72
+Values[sigma_greece].InitialValue	2.73209
+Values[beta_italy].InitialValue	509.234
+Values[alpha_italy].InitialValue	1006.27
+Values[gamma_italy].InitialValue	1023.67
+Values[sigma_italy].InitialValue	2501.55
+
+
+

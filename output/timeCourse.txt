@@ -1,0 +1,37 @@
+Time-Course Task
+
+Problem Description:
+    AutomaticStepSize: 0
+    StepNumber: 9
+    StepSize: 7
+    Duration: 63
+    TimeSeriesRequested: 1
+    OutputStartTime: 0
+    Output Event: 0
+    Start in Steady State: 0
+    Use Values: 0
+    Values: 
+
+Method: Deterministic (LSODA)
+    Integrate Reduced Model: 0
+    Relative Tolerance: 1e-06
+    Absolute Tolerance: 1e-12
+    Max Internal Steps: 100000
+    Max Internal Step Size: 0
+
+
+Time-Course Result:
+
+# Time	Compartments[S_greece]	Compartments[E_greece]	Compartments[I_greece]	Compartments[R_greece]	Compartments[D_greece]	Compartments[S_italy]	Compartments[E_italy]	Compartments[I_italy]	Compartments[R_italy]	Compartments[D_italy]	
+0	1.04231e+07	1	0	0	0	6.04618e+07	1	0	0	0	
+7	1.04231e+07	0.932782	0.695624	0.443312	0.0137107	6.04618e+07	1.26109	1.48622	0.524018	0.0316745	
+14	1.0423e+07	1.78948	1.39451	1.5407	0.0476506	6.04618e+07	1.30646	2.36473	1.82453	0.110285	
+21	1.0423e+07	3.51229	2.73959	3.70497	0.114587	6.04618e+07	1.31434	2.82539	3.55442	0.214848	
+28	1.0423e+07	6.89707	5.37982	7.95535	0.246042	6.04618e+07	1.31571	3.05839	5.50514	0.33276	
+35	1.0423e+07	13.5439	10.5644	16.3019	0.504182	6.04618e+07	1.31595	3.17483	7.56684	0.45738	
+42	1.0423e+07	26.5961	20.7454	32.6921	1.0111	6.04618e+07	1.31599	3.23278	9.68388	0.585346	
+49	1.04229e+07	52.2266	40.7378	64.8776	2.00652	6.04618e+07	1.316	3.26158	11.8284	0.714975	
+56	1.04227e+07	102.556	79.996	128.08	3.96123	6.04618e+07	1.316	3.27589	13.9867	0.84543	
+63	1.04224e+07	201.381	157.084	252.188	7.79963	6.04618e+07	1.316	3.28299	16.1517	0.976296	
+
+

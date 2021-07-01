@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.33 (Build 246) (http://www.copasi.org) at 2021-06-28T06:00:55Z -->
+<!-- generated with COPASI 4.33 (Build 246) (http://www.copasi.org) at 2021-07-01T00:15:01Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="33" versionDevel="246" copasiSourcesModified="0">
   <Model key="Model_0" name="Covid19_Model" simulationType="time" timeUnit="d" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="mol" type="deterministic" avogadroConstant="6.0221408570000002e+23">
@@ -47,8 +47,7 @@
       </Compartment>
       <Compartment key="Compartment_3" name="R_greece" simulationType="ode" dimensionality="3" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
         <Expression>
           (1-&lt;CN=Root,Model=Covid19_Model,Vector=Values[alpha_greece],Reference=InitialValue>)*&lt;CN=Root,Model=Covid19_Model,Vector=Values[gamma_greece],Reference=InitialValue>*&lt;CN=Root,Model=Covid19_Model,Vector=Compartments[I_greece],Reference=Volume>
@@ -63,24 +62,68 @@
           &lt;CN=Root,Model=Covid19_Model,Vector=Values[alpha_greece],Reference=InitialValue>*&lt;CN=Root,Model=Covid19_Model,Vector=Values[gamma_greece],Reference=InitialValue>*&lt;CN=Root,Model=Covid19_Model,Vector=Compartments[I_greece],Reference=Volume>
         </Expression>
       </Compartment>
+      <Compartment key="Compartment_5" name="S_italy" simulationType="ode" dimensionality="3" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+
+        </MiriamAnnotation>
+        <Expression>
+          -&lt;CN=Root,Model=Covid19_Model,Vector=Values[beta_italy],Reference=InitialValue>*(&lt;CN=Root,Model=Covid19_Model,Vector=Compartments[S_italy],Reference=Volume>/&lt;CN=Root,Model=Covid19_Model,Vector=Values[N_italy],Reference=Value>)*&lt;CN=Root,Model=Covid19_Model,Vector=Compartments[I_italy],Reference=Volume>
+        </Expression>
+      </Compartment>
+      <Compartment key="Compartment_6" name="E_italy" simulationType="ode" dimensionality="3" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+
+        </MiriamAnnotation>
+        <Expression>
+          &lt;CN=Root,Model=Covid19_Model,Vector=Values[beta_italy],Reference=InitialValue>*(&lt;CN=Root,Model=Covid19_Model,Vector=Compartments[S_italy],Reference=Volume>/&lt;CN=Root,Model=Covid19_Model,Vector=Values[N_italy],Reference=InitialValue>)-&lt;CN=Root,Model=Covid19_Model,Vector=Values[sigma_italy],Reference=InitialValue>*&lt;CN=Root,Model=Covid19_Model,Vector=Compartments[E_italy],Reference=Volume>
+        </Expression>
+      </Compartment>
+      <Compartment key="Compartment_7" name="I_italy" simulationType="ode" dimensionality="3" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+
+        </MiriamAnnotation>
+        <Expression>
+          &lt;CN=Root,Model=Covid19_Model,Vector=Values[sigma_italy],Reference=InitialValue>*&lt;CN=Root,Model=Covid19_Model,Vector=Compartments[E_italy],Reference=Volume>-&lt;CN=Root,Model=Covid19_Model,Vector=Values[gamma_italy],Reference=InitialValue>*&lt;CN=Root,Model=Covid19_Model,Vector=Compartments[I_italy],Reference=Volume>
+        </Expression>
+      </Compartment>
+      <Compartment key="Compartment_8" name="R_italy" simulationType="ode" dimensionality="3" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+
+        </MiriamAnnotation>
+        <Expression>
+          (1-&lt;CN=Root,Model=Covid19_Model,Vector=Values[alpha_italy],Reference=InitialValue>)*&lt;CN=Root,Model=Covid19_Model,Vector=Values[gamma_italy],Reference=InitialValue>*&lt;CN=Root,Model=Covid19_Model,Vector=Compartments[I_italy],Reference=Volume>
+        </Expression>
+      </Compartment>
+      <Compartment key="Compartment_9" name="D_italy" simulationType="ode" dimensionality="3" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+
+        </MiriamAnnotation>
+        <Expression>
+          &lt;CN=Root,Model=Covid19_Model,Vector=Values[alpha_italy],Reference=InitialValue>*&lt;CN=Root,Model=Covid19_Model,Vector=Values[gamma_italy],Reference=InitialValue>*&lt;CN=Root,Model=Covid19_Model,Vector=Compartments[I_italy],Reference=Volume>
+        </Expression>
+      </Compartment>
     </ListOfCompartments>
     <ListOfModelValues>
       <ModelValue key="ModelValue_0" name="N_italy" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+
         </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_1" name="N_greece" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+
         </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_2" name="beta_greece" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_2">
-</rdf:Description>
-</rdf:RDF>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_3" name="alpha_greece" simulationType="fixed" addNoise="false">
@@ -99,6 +142,46 @@
       <ModelValue key="ModelValue_5" name="sigma_greece" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_6" name="beta_italy" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_6">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_7" name="alpha_italy" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_7">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_8" name="gamma_italy" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_8">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_9" name="sigma_italy" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_9">
+</rdf:Description>
+</rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
     </ListOfModelValues>
@@ -121,6 +204,11 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Compartments[I_greece]" value="0" type="Compartment" simulationType="ode"/>
           <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Compartments[R_greece]" value="0" type="Compartment" simulationType="ode"/>
           <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Compartments[D_greece]" value="0" type="Compartment" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Compartments[S_italy]" value="60461825" type="Compartment" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Compartments[E_italy]" value="1" type="Compartment" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Compartments[I_italy]" value="0" type="Compartment" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Compartments[R_italy]" value="0" type="Compartment" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Compartments[D_italy]" value="0" type="Compartment" simulationType="ode"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
         </ModelParameterGroup>
@@ -131,6 +219,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Values[alpha_greece]" value="0.029999999999999999" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Values[gamma_greece]" value="0.16" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Values[sigma_greece]" value="0.20000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Values[beta_italy]" value="0.32900000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Values[alpha_italy]" value="0.057000000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Values[gamma_italy]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Covid19_Model,Vector=Values[sigma_italy]" value="0.25" type="ModelValue" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
         </ModelParameterGroup>
@@ -143,20 +235,29 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <StateTemplateVariable objectReference="Compartment_2"/>
       <StateTemplateVariable objectReference="Compartment_3"/>
       <StateTemplateVariable objectReference="Compartment_4"/>
+      <StateTemplateVariable objectReference="Compartment_5"/>
+      <StateTemplateVariable objectReference="Compartment_6"/>
+      <StateTemplateVariable objectReference="Compartment_7"/>
+      <StateTemplateVariable objectReference="Compartment_8"/>
+      <StateTemplateVariable objectReference="Compartment_9"/>
       <StateTemplateVariable objectReference="ModelValue_0"/>
       <StateTemplateVariable objectReference="ModelValue_1"/>
       <StateTemplateVariable objectReference="ModelValue_2"/>
       <StateTemplateVariable objectReference="ModelValue_3"/>
       <StateTemplateVariable objectReference="ModelValue_4"/>
       <StateTemplateVariable objectReference="ModelValue_5"/>
+      <StateTemplateVariable objectReference="ModelValue_6"/>
+      <StateTemplateVariable objectReference="ModelValue_7"/>
+      <StateTemplateVariable objectReference="ModelValue_8"/>
+      <StateTemplateVariable objectReference="ModelValue_9"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 10423053 1 0 0 0 60461826 10423054 0.38 0.029999999999999999 0.16 0.20000000000000001 
+      0 10423053 1 0 0 0 60461825 1 0 0 0 60461826 10423054 0.38 0.029999999999999999 0.16 0.20000000000000001 0.32900000000000001 0.057000000000000002 0.10000000000000001 0.25 
     </InitialState>
   </Model>
   <ListOfTasks>
     <Task key="Task_13" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
-      <Report reference="Report_10" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_10" target="steadyState.txt" append="0" confirmOverwrite="0"/>
       <Problem>
         <Parameter name="JacobianRequested" type="bool" value="1"/>
         <Parameter name="StabilityAnalysisRequested" type="bool" value="1"/>
@@ -169,18 +270,18 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Use Back Integration" type="bool" value="0"/>
         <Parameter name="Accept Negative Concentrations" type="bool" value="0"/>
         <Parameter name="Iteration Limit" type="unsignedInteger" value="50"/>
-        <Parameter name="Maximum duration for forward integration" type="unsignedFloat" value="1000000000"/>
-        <Parameter name="Maximum duration for backward integration" type="unsignedFloat" value="1000000"/>
+        <Parameter name="Maximum duration for forward integration" type="unsignedFloat" value="63"/>
+        <Parameter name="Maximum duration for backward integration" type="unsignedFloat" value="63"/>
         <Parameter name="Target Criterion" type="string" value="Distance and Rate"/>
       </Method>
     </Task>
     <Task key="Task_12" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
-      <Report reference="Report_9" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_9" target="timeCourse.txt" append="0" confirmOverwrite="0"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
-        <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
-        <Parameter name="StepSize" type="float" value="0.01"/>
-        <Parameter name="Duration" type="float" value="1"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="9"/>
+        <Parameter name="StepSize" type="float" value="7"/>
+        <Parameter name="Duration" type="float" value="63"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="1"/>
         <Parameter name="OutputStartTime" type="float" value="0"/>
         <Parameter name="Output Event" type="bool" value="0"/>
@@ -297,9 +398,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <Task key="Task_5" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
       <Report reference="Report_3" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
-        <Parameter name="StepSize" type="float" value="0.01"/>
-        <Parameter name="Duration" type="float" value="1"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="9"/>
+        <Parameter name="StepSize" type="float" value="7"/>
+        <Parameter name="Duration" type="float" value="63"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="1"/>
         <Parameter name="OutputStartTime" type="float" value="0"/>
       </Problem>
@@ -308,12 +409,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Method>
     </Task>
     <Task key="Task_16" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
-      <Report reference="Report_2" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_2" target="sensitivities.txt" append="1" confirmOverwrite="0"/>
       <Problem>
         <Parameter name="SubtaskType" type="unsignedInteger" value="1"/>
         <ParameterGroup name="TargetFunctions">
           <Parameter name="SingleObject" type="cn" value=""/>
-          <Parameter name="ObjectListType" type="unsignedInteger" value="7"/>
+          <Parameter name="ObjectListType" type="unsignedInteger" value="43"/>
         </ParameterGroup>
         <ParameterGroup name="ListOfVariables">
           <ParameterGroup name="Variables">
@@ -357,10 +458,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="PositiveDirection" type="bool" value="1"/>
         <Parameter name="NumOutCrossingsLimit" type="unsignedInteger" value="0"/>
         <Parameter name="LimitUntilConvergence" type="bool" value="0"/>
-        <Parameter name="ConvergenceTolerance" type="float" value="9.9999999999999995e-07"/>
+        <Parameter name="ConvergenceTolerance" type="float" value="0"/>
         <Parameter name="Threshold" type="float" value="0"/>
         <Parameter name="DelayOutputUntilConvergence" type="bool" value="0"/>
-        <Parameter name="OutputConvergenceTolerance" type="float" value="9.9999999999999995e-07"/>
+        <Parameter name="OutputConvergenceTolerance" type="float" value="0"/>
         <ParameterText name="TriggerExpression" type="expression">
           
         </ParameterText>
@@ -383,11 +484,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Method>
     </Task>
     <Task key="Task_2" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
+      <Report reference="Report_10" target="untitledtimeCourseSensitivities.txt" append="0" confirmOverwrite="0"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
-        <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
-        <Parameter name="StepSize" type="float" value="0.01"/>
-        <Parameter name="Duration" type="float" value="1"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="9"/>
+        <Parameter name="StepSize" type="float" value="7"/>
+        <Parameter name="Duration" type="float" value="63"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="1"/>
         <Parameter name="OutputStartTime" type="float" value="0"/>
         <Parameter name="Output Event" type="bool" value="0"/>
@@ -558,7 +660,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Report>
   </ListOfReports>
   <ListOfPlots>
-    <PlotSpecification name="TimeCourseGreece" type="Plot2D" active="1" taskTypes="">
+    <PlotSpecification name="Concentrations, Volumes, and Global Quantity Values" type="Plot2D" active="1" taskTypes="">
       <Parameter name="log X" type="bool" value="0"/>
       <Parameter name="log Y" type="bool" value="0"/>
       <ListOfPlotItems>
@@ -620,6 +722,66 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ListOfChannels>
             <ChannelSpec cn="CN=Root,Model=Covid19_Model,Reference=Time"/>
             <ChannelSpec cn="CN=Root,Model=Covid19_Model,Vector=Compartments[D_greece],Reference=Volume"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="Compartments[S_italy].Volume" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Covid19_Model,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Covid19_Model,Vector=Compartments[S_italy],Reference=Volume"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="Compartments[E_italy].Volume" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Covid19_Model,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Covid19_Model,Vector=Compartments[E_italy],Reference=Volume"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="Compartments[I_italy].Volume" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Covid19_Model,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Covid19_Model,Vector=Compartments[I_italy],Reference=Volume"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="Compartments[R_italy].Volume" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Covid19_Model,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Covid19_Model,Vector=Compartments[R_italy],Reference=Volume"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="Compartments[D_italy].Volume" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Covid19_Model,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Covid19_Model,Vector=Compartments[D_italy],Reference=Volume"/>
           </ListOfChannels>
         </PlotItem>
       </ListOfPlotItems>
